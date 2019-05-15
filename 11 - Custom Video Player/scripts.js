@@ -22,11 +22,13 @@ function updateButton(){
 }
 //move foward and back in the video
 function skip(){
-    console.log(this.dataset.skip);
+    // console.log(this.dataset.skip);
     video.currentTime += parseFloat(this.dataset.skip);
 }
+//slider handle change
 function handleRangeUpdate(){
-    console.log(this.value);
+    video[this.name] = this.value;
+    // console.log(this.name, this.value);
 }
 //event listeners
 video.addEventListener('click', togglePlay);
