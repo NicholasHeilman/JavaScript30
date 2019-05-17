@@ -44,10 +44,13 @@ function scrub(e) {
 //full screen 
 function toggleFullScreen(){
     // console.log('FullScreen Click');
+        //Chrome Support
 	if(video.requestFullScreen){
-		video.requestFullScreen();
+        video.requestFullScreen();
+        //Safari Support
 	} else if(video.webkitRequestFullScreen){
-		video.webkitRequestFullScreen();
+        video.webkitRequestFullScreen();
+        //FireFox Support
 	} else if(video.mozRequestFullScreen){
 		video.mozRequestFullScreen();
 	}
