@@ -7,6 +7,19 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secertCode = 'zelda'
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secertCode.length - 1, pressed.length - secertCode.length)
+    if(pressed.join('').includes(secertCode)){
+      console.log('WINNER, WINNER!!!!');
+      cornify_add();
+    }
+    console.log(pressed);
+  })
+
 </script>
 </body>
 </html>
