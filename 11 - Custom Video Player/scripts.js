@@ -43,14 +43,14 @@ function scrub(e) {
 }
 //full screen 
 function toggleFullScreen(){
-    console.log('FullScreen Click');
-	// if(video.requestFullScreen){
-	// 	video.requestFullScreen();
-	// } else if(video.webkitRequestFullScreen){
-	// 	video.webkitRequestFullScreen();
-	// } else if(video.mozRequestFullScreen){
-	// 	video.mozRequestFullScreen();
-	// }
+    // console.log('FullScreen Click');
+	if(video.requestFullScreen){
+		video.requestFullScreen();
+	} else if(video.webkitRequestFullScreen){
+		video.webkitRequestFullScreen();
+	} else if(video.mozRequestFullScreen){
+		video.mozRequestFullScreen();
+	}
 }
 //event listeners
 video.addEventListener('click', togglePlay);
