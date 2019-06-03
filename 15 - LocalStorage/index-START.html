@@ -32,12 +32,22 @@
 
 function addItem(e){
     e.preventDefault();
-    const text = this.querySelector('[name=item]');
+    const text = (this.querySelector('[name=item]')).value;
     const item = {
-      text: "item Name",
+      text,
       done: false
     }
-    console.log('Hello');
+    items.push(item);
+    this.reset();
+    console.log(item);
+}
+
+function populateList(plates = [], platesList) {
+    platesList.innerHTML = plates.map(( plate, i ) =>{
+      return `
+      
+      `;
+    })
 }
 
 addItems.addEventListener('submit', addItem);
