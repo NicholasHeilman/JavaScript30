@@ -37,8 +37,14 @@ function displayTimeLeft(seconds){
     endTime.textContent = `Be Back At ${hour}:${minutes < 10 ? '0' : '' } which is ${adjustedHour}:${minutes < 10 ? '0' : '' }`;
  }
 function startTimer(){
-    // console.log("button", this.dataset.time);
+    console.log("button", this.dataset);
     const seconds = parseInt(this.dataset.time);
     timer(seconds);
 }
  buttons.forEach(button => button.addEventListener('click', startTimer));
+ document.customForm.addEventListener('submit', function(e){
+     e.preventDefault();
+     const mins = this.minutes.value;
+     timer(mins * 60);
+     this.reset();
+ })
