@@ -24,7 +24,7 @@ function displayTimeLeft(seconds){
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds = seconds % 60;
     const display = `${minutes}:${remainderSeconds < 10 ? '0' : '' }${remainderSeconds}`;
-    document.title = display;
+    document.title = "CountDown Timer  " + display;
     timerDisplay.textContent = display;
     // console.log({minutes, remainderSeconds});
 }
@@ -35,7 +35,8 @@ function displayTimeLeft(seconds){
     const adjustedHour = hour > 12 ? hour - 12 : hour ;
     const minutes = end.getMinutes();
     endTime.textContent = `Be Back At ${adjustedHour}:${minutes < 10 ? '0' : '' }${minutes}`;
- }
+}
+
 function startTimer(){
     // console.log("button", this.dataset);
     const seconds = parseInt(this.dataset.time);
@@ -47,4 +48,4 @@ function startTimer(){
      const mins = this.minutes.value;
      timer(mins * 60);
      this.reset();
- })
+})
