@@ -37,7 +37,7 @@ function displayTimeLeft(seconds){
     endTime.textContent = `Be Back At ${hour}:${minutes < 10 ? '0' : '' }${minutes} which is ${adjustedHour}:${minutes < 10 ? '0' : '' }${minutes}`;
  }
 function startTimer(){
-    console.log("button", this.dataset);
+    // console.log("button", this.dataset);
     const seconds = parseInt(this.dataset.time);
     timer(seconds);
 }
